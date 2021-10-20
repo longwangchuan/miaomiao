@@ -45,7 +45,7 @@
   }
 }
 
-.router-link-exact-active {
+.router-link-active {
   color: red;
 }
 </style>

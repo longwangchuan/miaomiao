@@ -11,7 +11,7 @@ const routes = [
     component: Home,
     children: [
       {
-        path: 'city',
+        path: '/home/city',
         name: 'city',
         component:() =>import('../views/Home/City.vue')
       },
@@ -21,15 +21,19 @@ const routes = [
         component:() =>import('../views/Home/Hot.vue')
       },
       {
-        path: 'cinema',
+        path: '/home/cinema',
         name: 'cinema',
         component:() =>import('../views/Home/Cinema.vue')
       },
       {
-        path: 'search',
+        path: '/home/search',
         name: 'search',
         component:() =>import('../views/Home/Search.vue')
       },
+      {
+        path: '/home',
+        redirect:'/home/hot'
+      }
     ]
   },
   {
@@ -44,7 +48,7 @@ const routes = [
   },
   {
     path: '*',
-    redirect:'/home/hot'
+    redirect:'/home'
   }
 ]
 

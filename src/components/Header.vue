@@ -1,8 +1,25 @@
 <template>
   <div class="header">
-    猫眼电影
+    {{ title }}
+    <button @click="hand()">11111</button>
   </div>
 </template>
+
+<script>
+export default {
+  props: ["title"],
+  data() {
+    return {
+      item: "1112",
+    };
+  },
+  methods: {
+    hand() {
+      this.$emit("func", this.item);
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .header {
